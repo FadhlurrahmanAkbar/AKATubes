@@ -6,7 +6,7 @@ def listGenerator(n):
     arr = []
     for i in range(n):
         # arr.append(n-i)
-        arr.append(random.randint(1,512))
+        arr.append(random.randint(1,1500))
     return arr
 
-List.SaveList("n512visualizer",listGenerator(512))
+List.SaveList("1500Data.txt",listGenerator(1500))
