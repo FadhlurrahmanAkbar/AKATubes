@@ -18,7 +18,6 @@ def insertionSortIterative(A):
         # the right by one position i.e. A[j+1..i]
  
         A[j] = value
-        print(A)
 def insertionSortRecursive(A, i):
  
     value = A[i]
