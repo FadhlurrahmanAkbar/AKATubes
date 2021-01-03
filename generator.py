@@ -5,8 +5,7 @@ import List
 def listGenerator(n):
     arr = []
     for i in range(n):
-        # arr.append(n-i)
-        arr.append(random.randint(1,500))
+        arr.append(n-i)
+        #arr.append(random.randint(1,500))
     return arr
-
-List.SaveList("500Data.txt",listGenerator(500))
+List.SaveList("5000Data.txt",listGenerator(5000))

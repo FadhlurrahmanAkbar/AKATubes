@@ -34,5 +34,4 @@ def insertionSortRecursive(A, i):
     # the right by one position i.e. A[j+1..i]
  
     if i + 1 < len(A):
-        insertionSort(A, i + 1)
-    print(A)
+        insertionSortRecursive(A, i + 1)

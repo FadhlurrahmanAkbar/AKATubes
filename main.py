@@ -4,42 +4,31 @@ import List
 import timeit
 import execution
 import time
+import os
 
 if __name__ == "__main__":
     sys.setrecursionlimit(5000)
-    if len(sys.argv) == 2:
-        ldata = ["100DataTerbalik.txt","100DataUrut.txt"]
-        for i in ldata:
-            print("=========================")
-            print("WORST CASE") if i == "100DataTerbalik.txt" else print("BEST CASE")
-            arr = List.LoadList(i)
-            print("Banyak data : {}".format(len(arr)))
-
-            # iterative section
-            start = timeit.default_timer()
-            insertionSort.insertionSortIterative(arr)
-            execution.calulate("Iterative selection sort", start)
-
-            # recursive section
-            arr = List.LoadList(i)
-            start = timeit.default_timer()
-            insertionSort.insertionSortRecursive(arr,0)
-            execution.calulate("Recursive selection sort", start)
-    else:
-        ldata = ["100Data.txt","400Data.txt","1000Data.txt", "1500Data.txt"]
-        for i in ldata:
-            print("=========================")
-            arr = List.LoadList(i)
-            print("Banyak data : {}".format(len(arr)))
-
-            # iterative section
-            start = timeit.default_timer()
-            insertionSort.insertionSortIterative(arr)
-            
-            execution.calulate("Iterative selection sort", start)
-
-            # recursive section
-            arr = List.LoadList(i)
-            start = timeit.default_timer()
-            insertionSort.insertionSortRecursive(arr,0)
-            execution.calulate("Recursive selection sort", start)
+    dataCountTime = []
+    data = ["100DataTerbalik.txt","100DataUrut.txt","10Data.txt","100Data.txt", "500Data.txt", "1000Data.txt", "1500Data.txt", "5000DataTerbalik.txt" ]
+    for i in data:
+        dataTime = []
+        print("=============================================")
+        if i == "100DataTerbalik.txt":
+            print("WORST CASE")
+        elif i == "100DataUrut.txt":
+            print("BEST CASE")
+        elif i == "5000DataTerbalik.txt":
+            print("WORSE CASE")
+        arr = List.LoadList(i)
+        print("Banyak data : {}".format(len(arr)))
+    #iterative
+        start = timeit.default_timer()
+        insertionSortIterative(arr)
+        print(arr)   
+        dataTime.append("{:f}".format(execution.timeExceution("Iterative selection sort", start)))
+    # recursive section
+        arr = List.LoadList(i)
+        start = timeit.default_timer()
+        insertionSortRecursive(arr, 0)
+        print(arr)
+        dataTime.append("{:f}".format(execution.timeExceution("Iterative selection sort", start)))
