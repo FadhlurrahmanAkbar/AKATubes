@@ -33,5 +33,11 @@ def insertionSortRecursive(A, i):
     # Note that sublist[j..i-1] is shifted to
     # the right by one position i.e. A[j+1..i]
  
-    if i + 1 < len(A):
+    if i + 1 <= len(A)-1:
         insertionSortRecursive(A, i + 1)
+# A = open("./data/5000DataTerbalik.txt","r")
+# B = [4, 3, 5, 2, 1, 3, 2, 3]
+# insertionSortIterative(A)
+# print(A.readline())
+# insertionSortRecursive(B, 0)
+# print(B)
