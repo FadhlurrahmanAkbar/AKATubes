@@ -10,7 +10,7 @@ if __name__ == "__main__":
     sys.setrecursionlimit(6000) 
     dataCountTime = []
     data = ["100DataTerbalik.txt","100DataUrut.txt","10Data.txt","100Data.txt", "500Data.txt", "1000Data.txt", "1500Data.txt", "5000DataTerbalik.txt","5000DataUrut.txt" ]
-    # data = ["5000DataUrut.txt"]
+    # data = ["3000DataEqual.txt"]
     for i in data:
         dataTime = []
         print("=============================================")

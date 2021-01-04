@@ -9,8 +9,8 @@ def listGenerator(n):
         if pick == "urut":
             arr.append(i+1)
         elif pick == "reverse":
-            arr.append(i-1)
-        else:
+            arr.append(n-i)
+        elif pick == "rand":
             arr.append(random.randint(1,500))
     return arr
-List.SaveList("5000DataUrut.txt",listGenerator(5000))
+List.SaveList("2000DataTerbalik.txt",listGenerator(2000))
